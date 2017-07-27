@@ -24,15 +24,14 @@
             console.log(scrambledWord);
             // Prompt the user to guess the original word when given the scrambled word.
             var userAnswer = prompt(('Can you unscramble this "'  + scrambledWord + '" word?'));
+            // If the user guesses the correct word, congratulate them.
+            userAnswer = userAnswer.trim();
             if (userAnswer.toLowerCase() == randomWord) {
                 alert('That\'s correct!');
+            // If the user guesses wrong, tell them they were wrong and show the right word.
             } else {
                 alert('Sorry! ' + randomWord + ' is the correct answer.');
             }
-            
-            // If the user guesses wrong, tell them they were wrong and show the right word.
-            
-            // If the user guesses the correct word, congratulate them.
 
             playing = confirm("Press OK To keep playing or Cancel to quit");
 
